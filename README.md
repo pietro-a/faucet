@@ -64,15 +64,17 @@ shows the available configuration options and respective defaults:
 | account-name        | ACCOUNT_NAME      | name of the account to be used by the faucet                  | faucet    |
 | mnemonic            | MNEMONIC          | mnemonic for restoring an account                             |           |
 | keyring-password    | KEYRING_PASSWORD  | password for accessing keyring                                |           |
-| cli-name            | DENOMS            | denomination of the coins sent by default (comma separated)   | uatom     |
+| cli-name            | CLI_NAME          | name of the cli executable                                    | gaiad     |
+| denoms              | DENOMS            | denomination of the coins sent by default (comma separated)   | uatom     |
 | credit-amount       | CREDIT_AMOUNT     | amount to credit in each request                              | 10000000  |
 | max-credit          | MAX_CREDIT        | maximum credit per account                                    | 100000000 |
-| sdk-version         | SDK_VERSION       | version of sdk (launchpad or stargate)                        | stargate  |
+| sdk-version         | SDK_VERSION       | version of sdk (launchpad, stargate-40, stargate-44, latest)  | latest    |
 | node                | NODE              | address of tendermint RPC endpoint for this chain             |           |
 | keyring-backend     | KEYRING_BACKEND   | keyring backend to be used                                    |           |
 | legacy-send         | LEGACY_SEND       | whether to use legacy send command                            | false     |
 | coin-type           | COIN_TYPE         | registered coin type number for HD derivation (BIP-0044)      | 118       |
 | home                | HOME              | replaces the default home used by the chain                   |           |
+| gas-prices          | GAS_PRICES        | set the gas prices                                            |           |
 |                     |                   |                                                               |           |
 
 ### [gaia](https://github.com/cosmos/gaia) example

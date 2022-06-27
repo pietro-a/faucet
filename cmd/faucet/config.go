@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 
-	"github.com/tendermint/starport/starport/pkg/cosmosfaucet"
+	"github.com/ignite/cli/ignite/pkg/cosmosfaucet"
 
 	"github.com/tendermint/faucet/internal/environ"
 )
@@ -27,6 +27,7 @@ var (
 	legacySendCmd   bool
 	coinType        string
 	home            string
+	gasPrices       string
 )
 
 func init() {
@@ -86,5 +87,9 @@ func init() {
 	flag.StringVar(&home, "home",
 		environ.GetString("HOME", ""),
 		"replaces the default home used by the chain",
+	)
+	flag.StringVar(&gasPrices, "gas-prices",
+		environ.GetString("GAS_PRICES", ""),
+		"set the gas prices",
 	)
 }
